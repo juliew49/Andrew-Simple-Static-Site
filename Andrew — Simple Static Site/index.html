@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Andrew — Simple Static Site</title>
+  <meta name="description" content="A minimal static site using HTML, CSS and JavaScript." />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">Andrew</a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <h1>Welcome to Andrew</h1>
+        <p>A tiny static site built with HTML, CSS and a little JavaScript.</p>
+        <p><a class="cta" href="#contact">Get in touch</a></p>
+      </div>
+    </section>
+
+    <section class="container about" id="about">
+      <h2>About</h2>
+      <p>This sample demonstrates a simple responsive layout, a small navigation toggle, and a contact form with basic client-side validation.</p>
+    </section>
+
+    <section class="container features" id="features">
+      <h2>Features</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Works on phones and desktops using a CSS grid and a mobile menu toggle.</p>
+        </article>
+
+        <article class="card">
+          <h3>Accessible</h3>
+          <p>Simple semantic HTML with accessible controls and labels.</p>
+        </article>
+
+        <article class="card">
+          <h3>Interactive</h3>
+          <p>Contact form validation and a friendly success message using plain JavaScript.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container contact" id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required placeholder="Your name" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Write a message..."></textarea>
+
+        <div class="form-row">
+          <button type="submit" class="btn">Send</button>
+          <button type="reset" class="btn btn--muted">Reset</button>
+        </div>
+
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Andrew — Built with HTML, CSS & JavaScript</small>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
